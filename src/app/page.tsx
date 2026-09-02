@@ -40,26 +40,6 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
 
-  // Scroll fade effects for all sections
-  const aboutRef = useRef<HTMLElement>(null);
-  const { scrollYProgress: aboutScroll } = useScroll({ target: aboutRef, offset: ["start end", "end start"] });
-  const aboutOpacity = useTransform(aboutScroll, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-
-  const projectsRef = useRef<HTMLElement>(null);
-  const { scrollYProgress: projectsScroll } = useScroll({ target: projectsRef, offset: ["start end", "end start"] });
-  const projectsOpacity = useTransform(projectsScroll, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-
-  const skillsRef = useRef<HTMLElement>(null);
-  const { scrollYProgress: skillsScroll } = useScroll({ target: skillsRef, offset: ["start end", "end start"] });
-  const skillsOpacity = useTransform(skillsScroll, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-
-  const portfolioRef = useRef<HTMLElement>(null);
-  const { scrollYProgress: portfolioScroll } = useScroll({ target: portfolioRef, offset: ["start end", "end start"] });
-  const portfolioOpacity = useTransform(portfolioScroll, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-
-  const contactRef = useRef<HTMLElement>(null);
-  const { scrollYProgress: contactScroll } = useScroll({ target: contactRef, offset: ["start end", "end start"] });
-  const contactOpacity = useTransform(contactScroll, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -170,7 +150,7 @@ export default function Home() {
           {/* Brand Logo & Avatar Badge */}
           <a href="#home" className="flex items-center gap-2.5 pl-1.5 pr-2 py-1 rounded-full hover:bg-white/[0.04] transition-colors group">
             <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-white/20 group-hover:border-accent/60 transition-colors shadow-sm bg-neutral-900">
-              <Image src="/cv-photo.webp" alt="Jozhh" fill className="object-cover" />
+              <Image src="/new-profile-photo.jpg" alt="Jozhh" fill className="object-cover" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
