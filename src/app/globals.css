@@ -363,6 +363,20 @@ h6 {
 
 /* ===== PRINT STYLES (CV) ===== */
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
   body,
   body::before,
@@ -378,17 +392,38 @@ h6 {
   .cv-page {
     padding: 0 !important;
     margin: 0 !important;
-    min-height: auto !important;
-    background: none !important;
+    min-height: 100vh !important;
+    background: white !important;
   }
 
-  .cv-page>div {
+  .cv-paper {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-width: 210mm !important;
+    min-height: 297mm !important;
     box-shadow: none !important;
-    width: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    flex-direction: row !important;
+    display: flex !important;
+    overflow: hidden !important;
   }
 
-  @page {
-    size: A4;
-    margin: 0;
+  .cv-left-col {
+    width: 35% !important;
+    background-color: #1F2937 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .cv-right-col {
+    width: 65% !important;
+    background-color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .cv-corner-decor {
+    display: block !important;
   }
 }

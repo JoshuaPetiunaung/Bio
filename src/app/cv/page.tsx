@@ -5,15 +5,15 @@ import DownloadButton from "./DownloadButton";
 
 export default function CVPage() {
   return (
-    <div className="cv-page min-h-screen bg-muted/30 py-8 flex justify-center font-sans relative">
+    <div className="cv-page min-h-screen bg-muted/30 py-4 sm:py-8 px-2 sm:px-4 flex justify-center font-sans relative">
       <DownloadButton />
-      {/* A4 Paper Container */}
-      <div className="bg-white w-[21cm] h-[29.7cm] shadow-xl relative overflow-hidden flex text-slate-800">
+      {/* A4 Paper Container — Responsive for Mobile/Tablet/Desktop Screen, exact A4 2-column on Print */}
+      <div className="cv-paper bg-white w-full max-w-[96vw] md:max-w-[21cm] min-h-auto md:min-h-[29.7cm] shadow-xl relative overflow-hidden flex flex-col md:flex-row text-slate-800 rounded-2xl md:rounded-none">
         
         {/* LEFT COLUMN - DARK */}
-        <div className="w-[35%] bg-[#1F2937] text-white px-6 py-8 flex flex-col items-center relative z-10">
+        <div className="cv-left-col w-full md:w-[35%] bg-[#1F2937] text-white px-5 sm:px-6 py-7 md:py-8 flex flex-col items-center relative z-10 shrink-0">
           {/* Photo Container */}
-          <div className="w-36 h-36 rounded-full border-4 border-white shadow-lg mb-6 overflow-hidden shrink-0 relative">
+          <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-6 overflow-hidden shrink-0 relative">
             <Image
               src="/cv-photo.webp"
               alt="Joshua Ezra Petiunaung"
@@ -85,20 +85,20 @@ export default function CVPage() {
         </div>
 
         {/* RIGHT COLUMN - WHITE */}
-        <div className="w-[65%] bg-white px-8 py-8 pt-10 relative flex flex-col gap-4">
+        <div className="cv-right-col w-full md:w-[65%] bg-white px-5 sm:px-8 py-7 md:py-8 md:pt-10 relative flex flex-col gap-4">
           
           {/* Top Right Decoration to match the screenshot */}
-          <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-20px] right-[-20px] w-0 h-0 border-l-[80px] border-l-transparent border-b-[80px] border-b-transparent border-t-[80px] border-t-amber-500 border-r-[80px] border-r-amber-500"></div>
-            <div className="absolute top-[10px] right-[-30px] w-0 h-0 border-l-[60px] border-l-transparent border-b-[100px] border-b-transparent border-t-[100px] border-t-[#1F2937] border-r-[60px] border-r-[#1F2937]"></div>
+          <div className="cv-corner-decor absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 overflow-hidden pointer-events-none">
+            <div className="absolute top-[-20px] right-[-20px] w-0 h-0 border-l-[60px] sm:border-l-[80px] border-l-transparent border-b-[60px] sm:border-b-[80px] border-b-transparent border-t-[60px] sm:border-t-[80px] border-t-amber-500 border-r-[60px] sm:border-r-[80px] border-r-amber-500"></div>
+            <div className="absolute top-[10px] right-[-30px] w-0 h-0 border-l-[45px] sm:border-l-[60px] border-l-transparent border-b-[75px] sm:border-b-[100px] border-b-transparent border-t-[75px] sm:border-t-[100px] border-t-[#1F2937] border-r-[45px] sm:border-r-[60px] border-r-[#1F2937]"></div>
           </div>
 
           {/* HEADER NAME */}
-          <div className="mb-1 relative z-10">
-            <h1 className="text-3xl font-black text-slate-800 tracking-tight leading-none uppercase mb-1">
-              JOSHUA EZRA<br/>PETIUNAUNG
+          <div className="mb-1 relative z-10 pr-12 md:pr-0">
+            <h1 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-black text-slate-800 tracking-tight leading-snug uppercase mb-1">
+              JOSHUA EZRA PETIUNAUNG
             </h1>
-            <h2 className="text-base text-slate-600 italic">
+            <h2 className="text-sm sm:text-base text-slate-600 italic">
               Fresh Graduate
             </h2>
           </div>
@@ -119,7 +119,7 @@ export default function CVPage() {
               Pengalaman Kerja
             </h3>
             <div className="mb-2">
-              <div className="flex justify-between items-start mb-0.5">
+              <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
                 <h4 className="font-bold text-slate-800 text-sm">IT Support Junior (Magang)</h4>
                 <span className="text-slate-500 text-xs italic">10 Jun 2025 – 10 Ags 2025</span>
               </div>
@@ -139,26 +139,26 @@ export default function CVPage() {
             </h3>
             <div className="space-y-2">
               <div>
-                <div className="flex justify-between items-start mb-0.5">
+                <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
                   <h4 className="font-bold text-slate-800 text-sm">S1 Universitas Sam Ratulangi</h4>
                   <span className="text-slate-500 text-xs italic">2022 – 2026</span>
                 </div>
                 <p className="text-xs text-slate-600">Teknik Informatika</p>
               </div>
               <div>
-                <div className="flex justify-between items-start mb-0.5">
+                <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
                   <h4 className="font-bold text-slate-800 text-sm">SMA N 2 Bitung</h4>
                   <span className="text-slate-500 text-xs italic">2019 – 2022</span>
                 </div>
               </div>
               <div>
-                <div className="flex justify-between items-start mb-0.5">
+                <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
                   <h4 className="font-bold text-slate-800 text-sm">SMP Katolik Don Bosco Bitung</h4>
                   <span className="text-slate-500 text-xs italic">2016 – 2019</span>
                 </div>
               </div>
               <div>
-                <div className="flex justify-between items-start mb-0.5">
+                <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
                   <h4 className="font-bold text-slate-800 text-sm">SD RK 2 Bitung</h4>
                   <span className="text-slate-500 text-xs italic">2010 – 2016</span>
                 </div>
@@ -196,7 +196,7 @@ export default function CVPage() {
             <h3 className="text-sm font-bold text-slate-800 border-b border-slate-300 pb-1 mb-2 uppercase tracking-wide">
               Profil Pribadi
             </h3>
-            <div className="grid grid-cols-2 gap-y-2 text-xs text-slate-600">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-xs text-slate-600">
               <div>
                 <span className="font-semibold text-slate-800">Kelahiran:</span> Bitung, 29 Sep 2004
               </div>
