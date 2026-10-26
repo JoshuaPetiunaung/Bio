@@ -107,7 +107,7 @@ export default function Home() {
 
   const contacts = [
     { label: "Email", href: "mailto:joshua.petiunaung56@gmail.com", icon: <Mail size={18} /> },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-ezra-petiunaung", icon: <FaLinkedin size={18} />, external: true },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-ezra-petiunaung-80839642a", icon: <FaLinkedin size={18} />, external: true },
     { label: "Instagram", href: "https://www.instagram.com/joshuapetiunaung", icon: <FaInstagram size={18} />, external: true },
     { label: "Facebook", href: "https://web.facebook.com/JoshuaPetiunaung", icon: <FaFacebook size={18} />, external: true },
   ];
