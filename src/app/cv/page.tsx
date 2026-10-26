@@ -157,12 +157,7 @@ export default function CVPage() {
                   <span className="text-slate-500 text-xs italic">2016 – 2019</span>
                 </div>
               </div>
-              <div>
-                <div className="flex flex-wrap justify-between items-start gap-1 mb-0.5">
-                  <h4 className="font-bold text-slate-800 text-sm">SD RK 2 Bitung</h4>
-                  <span className="text-slate-500 text-xs italic">2010 – 2016</span>
-                </div>
-              </div>
+
             </div>
           </section>
 
