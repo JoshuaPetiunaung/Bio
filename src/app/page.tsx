@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { 
-  Download, Code, Wrench, Network, Briefcase, GraduationCap, 
+import {
+  Download, Code, Wrench, Network, Briefcase, GraduationCap,
   Mail, ArrowUpRight, ChevronDown, Menu, X, ArrowDown,
   Home as HomeIcon, User, Cpu, FileText
 } from "lucide-react";
@@ -108,7 +108,7 @@ export default function Home() {
   const contacts = [
     { label: "Email", href: "mailto:petiunaungjoshua@gmail.com", icon: <Mail size={18} /> },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-petiunaung-491419356/", icon: <FaLinkedin size={18} />, external: true },
-    { label: "Instagram", href: "https://www.instagram.com/joshua.ezraa", icon: <FaInstagram size={18} />, external: true },
+    { label: "Instagram", href: "https://www.instagram.com/joshuapetiunaung", icon: <FaInstagram size={18} />, external: true },
     { label: "Facebook", href: "https://www.facebook.com/share/18H2vH1bYt/", icon: <FaFacebook size={18} />, external: true },
   ];
 
