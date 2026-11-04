@@ -100,7 +100,7 @@ export default function Home() {
     {
       title: "IT Support Junior (Magang)",
       subtitle: "PT. Salim Ivomas Pratama, Tbk Bitung (Bimoli)",
-      desc: "Menangani troubleshooting hardware, instalasi OS Windows, maintenance jaringan LAN dasar, serta perakitan dan konfigurasi CCTV di lingkungan operasional pabrik.",
+      desc: "Menangani troubleshooting hardware, instalasi OS Windows, serta perakitan dan konfigurasi CCTV di lingkungan operasional pabrik.",
       icon: <Wrench size={20} />,
     },
   ];
